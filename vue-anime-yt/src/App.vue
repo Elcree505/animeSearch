@@ -57,7 +57,7 @@ export default {
     // Fetch recommended anime on component mount
     onMounted(async () => {
       try {
-        const response = await fetch(`https://api.jikan.moe/v4/recommendations/anime?q=1`);
+        const response = await fetch(`https://api.jikan.moe/v4/recommendations/anime`);
         const data = await response.json();
         animeRecommend.value = data.data.map(item => item.entry).flat() ;
         console.log("Anime Recommend")
